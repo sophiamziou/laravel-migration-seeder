@@ -28,6 +28,7 @@ class TrainSeeder extends Seeder
             $newTrain->numero_carrozze = $faker->numberBetween(1, 10);
             $newTrain->in_orario = $faker->randomElement([true, false]);
             $newTrain->cancellato = $faker->randomElement([true, false]);
+            $newTrain->save();
         }
     }
 }
