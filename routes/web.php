@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TrainController;
+use App\Http\Controllers\TrainController as TrainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TrainController::class, 'getTrains'])->name('trains');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-// Route::get('/', function () {
-//     $title = 'Hello world!';
-//     return view('trains', compact('title'));
-// });
+function trainbool($val)
+{
+    if ($val == 1) {
+        return 'sì';
+    } else {
+        return 'no';
+    }
+}

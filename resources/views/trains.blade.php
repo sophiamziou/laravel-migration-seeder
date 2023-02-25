@@ -40,12 +40,12 @@
                             <td>{{$train->orario_di_arrivo}}</td>
                             <td>{{$train->codice_treno}}</td>
                             <td>{{$train->numero_carrozze}}</td>
-                            <td>{{$train->in_orario}}</td>
+                            <td>{{trainbool($train->in_orario)}}</td>
                             <td>{{$train->cancellato}}</td>
                           </tr>
                         @endforeach
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
         </div>
