@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TrainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TrainController::class, 'getTrains'])->name('trains');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+// Route::get('/', function () {
+//     $title = 'Hello world!';
+//     return view('trains', compact('title'));
+// });
