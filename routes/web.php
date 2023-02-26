@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TrainController::class, 'getTrains'])->name('trains');
 
-function trainbool($val)
-{
-    if ($val == 1) {
-        return 'sì';
-    } else {
-        return 'no';
-    }
-}
+// function trainbool($val)
+// {
+//     if ($val == 1) {
+//         return 'sì';
+//     } else {
+//         return 'no';
+//     }
+// }

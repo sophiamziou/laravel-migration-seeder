@@ -9,6 +9,7 @@
 
     <!-- Styles -->
     @vite('resources/js/app.js')
+    @inject('utils', 'App\Utils\Utils')
 
 </head>
 <body>
@@ -40,8 +41,8 @@
                             <td>{{$train->orario_di_arrivo}}</td>
                             <td>{{$train->codice_treno}}</td>
                             <td>{{$train->numero_carrozze}}</td>
-                            <td>{{trainbool($train->in_orario)}}</td>
-                            <td>{{$train->cancellato}}</td>
+                            <td>{{ $utils->trainbool($train->in_orario) }}</td>
+                            <td>{{ $utils->trainbool($train->cancellato) }}</td>
                           </tr>
                         @endforeach
                         </tbody>
